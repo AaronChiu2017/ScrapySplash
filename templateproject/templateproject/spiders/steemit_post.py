@@ -19,13 +19,14 @@ class SteemitPostSpider(scrapy.Spider):
                 self.parse_link,
                 endpoint='render.json',
                 args={
-                    'har': 1,
+                    'wait': 0.5,
                     'html': 1,
                 }
             )
 
     def parse_link(self, response):
         print("PARSED", response.real_url, response.url)
-        print(response.css("title").extract())
-        print(response.data["har"]["log"]["pages"])
-        print(response.headers.get('Content-Type'))
+        print (response.xpath(".//*[@id='posts_list']/ul/li/article/div[@class='PostSummary__content']/div[1]/h3/a/text()").extract())
+#        print(response.css("title").extract())
+#        print(response.data["har"]["log"]["pages"])
+#        print(response.headers.get('Content-Type'))

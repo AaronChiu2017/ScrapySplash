@@ -8,7 +8,7 @@
 import scrapy
 
 
-class NewprojectItem(scrapy.Item):
+class TemplateprojectItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass

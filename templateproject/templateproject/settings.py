@@ -9,10 +9,10 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'newproject'
+BOT_NAME = 'templateproject'
 
-SPIDER_MODULES = ['newproject.spiders']
-NEWSPIDER_MODULE = 'newproject.spiders'
+SPIDER_MODULES = ['templateproject.spiders']
+NEWSPIDER_MODULE = 'templateproject.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -94,3 +94,4 @@ DOWNLOADER_MIDDLEWARES = {
 DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
 SPLASH_URL = 'http://127.0.0.1:8050'
+
